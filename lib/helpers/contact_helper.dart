@@ -56,6 +56,29 @@ class ContactHelper{
     });
   }
 
+  //função para salvar os contatos:
+  Future<Contact> saveContact(Contact contact) async{
+    Database dbContact = await db;
+    contact.id = await dbContact.insert(contactTable, contact.toMap());
+    return contact;
+  }
+  //os contatos serão pegos pela id:
+  Future<Contact?> getContact(int id) async{
+    Database dbContact = await db;
+    List<Map> maps = await dbContact.query(contactTable, columns: [idColumn, nameColumn, emailColumn, phoneColumn, imgColumn],
+    where: "$idColumn = ?", whereArgs: [id]);
+
+    //se algo foi retornado do maps
+    if(maps.length > 0){
+      return Contact.fromMap(maps.first);
+    }
+    //se não encontrar nada
+    else {
+      return null;
+    }
+
+  }
+
 
 }
 
@@ -80,7 +103,7 @@ class Contact{
   }
 
   //para guardar essas informações no sqlite precisamos transformar os contatos em um mapa
-  Map toMap(){
+  Map<String, dynamic> toMap(){
     Map<String,dynamic> map = {
       nameColumn: name,
       emailColumn: email,
