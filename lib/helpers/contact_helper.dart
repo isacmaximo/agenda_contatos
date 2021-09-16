@@ -22,7 +22,7 @@ class ContactHelper{
   ContactHelper.internal();
 
   //declarando o banco de dados
-  late Database _db;
+  Database _db;
 
   Future<Database> get db async {
     //se o banco de dado já estiver inicializado:
@@ -42,7 +42,7 @@ class ContactHelper{
     //aqui é o caminho:
     final databasesPath = await getDatabasesPath();
     //caminho que tem o arquivo do banco de dados
-    final path = join(databasesPath, "contacts.db");
+    final path = join(databasesPath, "contactsnew.db");
 
     //abrindo o banco de dados:
     //caminho, versão, função que cria um banco de dados
@@ -64,7 +64,7 @@ class ContactHelper{
   }
 
   //os contatos serão pegos pela id:
-  Future<Contact?> getContact(int id) async{
+  Future<Contact> getContact(int id) async{
     Database dbContact = await db;
     List<Map> maps = await dbContact.query(contactTable, columns: [idColumn, nameColumn, emailColumn, phoneColumn, imgColumn],
     where: "$idColumn = ?", whereArgs: [id]);
@@ -124,11 +124,11 @@ class ContactHelper{
 //utilizamos late pois a variável ainda não foi inicializada
 //utilizaremos um construtor fromMap, pois nós vamos armazenar os contatos em formato de mapa
 class Contact{
-  late int id;
-  late String name;
-  late String email;
-  late String phone;
-  late String img;
+  int id;
+  String name;
+  String email;
+  String phone;
+  String img;
 
   //pegado do mapa e passando pro contato
   Contact.fromMap(Map map){

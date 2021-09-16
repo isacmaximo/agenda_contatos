@@ -245,10 +245,10 @@
       "name": "agenda_de_contatos",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-09-16T18:10:50.341301Z",
+  "generated": "2021-09-16T22:20:42.407091Z",
   "generator": "pub",
   "generatorVersion": "2.13.0-211.6.beta"
 }

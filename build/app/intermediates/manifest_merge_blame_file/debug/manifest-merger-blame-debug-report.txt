@@ -15,16 +15,16 @@
 14-->C:\Users\iysaa\Desktop\agenda_de_contatos\android\app\src\debug\AndroidManifest.xml:6:5-66
 14-->C:\Users\iysaa\Desktop\agenda_de_contatos\android\app\src\debug\AndroidManifest.xml:6:22-64
 15    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-15-->[:image_picker] C:\Users\iysaa\Desktop\agenda_de_contatos\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-80
-15-->[:image_picker] C:\Users\iysaa\Desktop\agenda_de_contatos\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-77
+15-->[:image_picker] C:\Users\iysaa\Desktop\agenda_de_contatos\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-80
+15-->[:image_picker] C:\Users\iysaa\Desktop\agenda_de_contatos\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:7:22-77
 16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-16-->[:image_picker] C:\Users\iysaa\Desktop\agenda_de_contatos\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-81
-16-->[:image_picker] C:\Users\iysaa\Desktop\agenda_de_contatos\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:8:22-78
+16-->[:image_picker] C:\Users\iysaa\Desktop\agenda_de_contatos\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:8:5-81
+16-->[:image_picker] C:\Users\iysaa\Desktop\agenda_de_contatos\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:8:22-78
 17
 18    <application
 18-->C:\Users\iysaa\Desktop\agenda_de_contatos\android\app\src\main\AndroidManifest.xml:3:4-40:19
 19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-19-->[androidx.core:core:1.1.0] C:\Users\iysaa\.gradle\caches\transforms-2\files-2.1\2e94107f30f39be366a17347c2bf100b\core-1.1.0\AndroidManifest.xml:24:18-86
+19-->[androidx.core:core:1.1.0] C:\Users\iysaa\.gradle\caches\transforms-3\607a76edee2614cbc0a129eb5d5b8512\transformed\core-1.1.0\AndroidManifest.xml:24:18-86
 20        android:debuggable="true"
 21        android:icon="@mipmap/ic_launcher"
 21-->C:\Users\iysaa\Desktop\agenda_de_contatos\android\app\src\main\AndroidManifest.xml:5:9-43
@@ -94,31 +94,31 @@
 63-->C:\Users\iysaa\Desktop\agenda_de_contatos\android\app\src\main\AndroidManifest.xml:39:13-30
 64
 65        <provider
-65-->[:image_picker] C:\Users\iysaa\Desktop\agenda_de_contatos\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:9-19:20
+65-->[:image_picker] C:\Users\iysaa\Desktop\agenda_de_contatos\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:11:9-19:20
 66            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-66-->[:image_picker] C:\Users\iysaa\Desktop\agenda_de_contatos\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-82
+66-->[:image_picker] C:\Users\iysaa\Desktop\agenda_de_contatos\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-82
 67            android:authorities="com.example.agenda_de_contatos.flutter.image_provider"
-67-->[:image_picker] C:\Users\iysaa\Desktop\agenda_de_contatos\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-74
+67-->[:image_picker] C:\Users\iysaa\Desktop\agenda_de_contatos\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-74
 68            android:exported="false"
-68-->[:image_picker] C:\Users\iysaa\Desktop\agenda_de_contatos\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-37
+68-->[:image_picker] C:\Users\iysaa\Desktop\agenda_de_contatos\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-37
 69            android:grantUriPermissions="true" >
-69-->[:image_picker] C:\Users\iysaa\Desktop\agenda_de_contatos\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-47
+69-->[:image_picker] C:\Users\iysaa\Desktop\agenda_de_contatos\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-47
 70            <meta-data
-70-->[:image_picker] C:\Users\iysaa\Desktop\agenda_de_contatos\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-18:75
+70-->[:image_picker] C:\Users\iysaa\Desktop\agenda_de_contatos\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-18:75
 71                android:name="android.support.FILE_PROVIDER_PATHS"
-71-->[:image_picker] C:\Users\iysaa\Desktop\agenda_de_contatos\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-67
+71-->[:image_picker] C:\Users\iysaa\Desktop\agenda_de_contatos\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-67
 72                android:resource="@xml/flutter_image_picker_file_paths" />
-72-->[:image_picker] C:\Users\iysaa\Desktop\agenda_de_contatos\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:18:17-72
+72-->[:image_picker] C:\Users\iysaa\Desktop\agenda_de_contatos\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:18:17-72
 73        </provider>
 74
 75        <activity
-75-->[:url_launcher] C:\Users\iysaa\Desktop\agenda_de_contatos\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-11:74
+75-->[:url_launcher] C:\Users\iysaa\Desktop\agenda_de_contatos\build\url_launcher\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-11:74
 76            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
-76-->[:url_launcher] C:\Users\iysaa\Desktop\agenda_de_contatos\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-74
+76-->[:url_launcher] C:\Users\iysaa\Desktop\agenda_de_contatos\build\url_launcher\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-74
 77            android:exported="false"
-77-->[:url_launcher] C:\Users\iysaa\Desktop\agenda_de_contatos\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-37
+77-->[:url_launcher] C:\Users\iysaa\Desktop\agenda_de_contatos\build\url_launcher\intermediates\merged_manifest\debug\AndroidManifest.xml:10:13-37
 78            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-78-->[:url_launcher] C:\Users\iysaa\Desktop\agenda_de_contatos\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-71
+78-->[:url_launcher] C:\Users\iysaa\Desktop\agenda_de_contatos\build\url_launcher\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-71
 79    </application>
 80
 81</manifest>

@@ -11,12 +11,15 @@
 //dentro da pasta helpers vai ter um dart file chamado contact_helper,
 //que sera´uma classe que irá ajudar a obter os contatos
 
+//as telas estarão na pasta ui
+
 //libraries necessárias
 import 'package:flutter/material.dart';
+import 'package:agenda_de_contatos/ui/home_page.dart';
 
 //função principal
 void main(){
   runApp(MaterialApp(
-
+    home: HomePage(),
   ));
 }

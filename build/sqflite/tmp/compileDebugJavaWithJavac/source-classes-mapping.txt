@@ -28,18 +28,18 @@ com/tekartik/sqflite/operation/OperationResult.java
  com.tekartik.sqflite.operation.OperationResult
 com/tekartik/sqflite/LogLevel.java
  com.tekartik.sqflite.LogLevel
-com/tekartik/sqflite/Constant.java
- com.tekartik.sqflite.Constant
 com/tekartik/sqflite/operation/BatchOperation.java
  com.tekartik.sqflite.operation.BatchOperation
  com.tekartik.sqflite.operation.BatchOperation$BatchOperationResult
+com/tekartik/sqflite/Constant.java
+ com.tekartik.sqflite.Constant
 com/tekartik/sqflite/SqlCommand.java
  com.tekartik.sqflite.SqlCommand
 com/tekartik/sqflite/operation/BaseOperation.java
  com.tekartik.sqflite.operation.BaseOperation
 com/tekartik/sqflite/dev/Debug.java
  com.tekartik.sqflite.dev.Debug
-com/tekartik/sqflite/operation/ExecuteOperation.java
- com.tekartik.sqflite.operation.ExecuteOperation
 com/tekartik/sqflite/operation/SqlErrorInfo.java
  com.tekartik.sqflite.operation.SqlErrorInfo
+com/tekartik/sqflite/operation/ExecuteOperation.java
+ com.tekartik.sqflite.operation.ExecuteOperation
