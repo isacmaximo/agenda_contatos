@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:agenda_de_contatos/helpers/contact_helper.dart';
 import 'dart:io';
 
+import 'contact_page.dart';
+
 class HomePage extends StatefulWidget {
 
   @override
@@ -26,12 +28,7 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
 
-    helper.getAllContacts().then((list) {
-      //utilizado para atualizar ua tela em tempo real
-    setState(() {
-        contacts = list;
-      });
-    });
+    _getAllContacts();
 
   }
 
@@ -47,14 +44,18 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
       ),
       backgroundColor: Colors.white,
+
       //botão flutuante:
       floatingActionButton: FloatingActionButton(
-        onPressed: (){},
+        onPressed: (){
+          _showContactPage();
+        },
         child: Icon(Icons.add),
         backgroundColor: Colors.red,
       ),
+
       //corpo da HomePage
-        //vai ter uma listview dos contatos:
+        // vai ter uma listview dos contatos:
       body: ListView.builder(
           padding: EdgeInsets.all(10.0),
           itemCount: contacts.length,
@@ -112,6 +113,42 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
+      onTap: (){
+        //ao clicar, vai poder editar o respectivo o contato
+        _showContactPage(contact: contacts[index]);
+      },
     );
   }
+
+  //função para ir para tela de contato (editar contato):
+  void _showContactPage({Contact contact}) async{
+    //usamos o navigator para navegar para outra página
+    final recContact = await Navigator.push(context, MaterialPageRoute(builder: (context) => ContactPage(contact: contact,)));
+
+    //se receber algum contato
+    if(recContact != null){
+      //se eu tiver um contato:
+      if(contact != null){
+        //os contatos vão ser atualizados
+        await helper.updateContact(recContact);
+      }
+      //se não passar um contato, então tem que ser salvo como um novo contato:
+      else{
+        await helper.saveContact(recContact);
+      }
+      //obtemos todos os contatos:
+      _getAllContacts();
+    }
+  }
+
+  void _getAllContacts(){
+
+    helper.getAllContacts().then((list) {
+      //utilizado para atualizar ua tela em tempo real
+      setState(() {
+        contacts = list;
+      });
+    });
+  }
+
 }
