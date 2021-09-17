@@ -95,19 +95,21 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               //informações da linha (contato):
-              Padding(
-                  padding: EdgeInsets.only(left: 10.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        //textos: nome, email e telefone
-                        Text(contacts[index].name ?? "", style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold)),
-                        Text(contacts[index].email ?? "", style: TextStyle(fontSize: 18.0)),
-                        Text(contacts[index].phone ?? "", style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold)),
-                      ],
+             Flexible(
+               child: Padding(
+                   padding: EdgeInsets.only(left: 10.0),
+                   child: Column(
+                     crossAxisAlignment: CrossAxisAlignment.start,
+                     children: <Widget>[
+                       //textos: nome, email e telefone
+                       Text(contacts[index].name ?? "", style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold), overflow: TextOverflow.ellipsis),
+                       Text(contacts[index].email ?? "", style: TextStyle(fontSize: 18.0), overflow: TextOverflow.ellipsis),
+                       Text(contacts[index].phone ?? "", style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold), overflow: TextOverflow.ellipsis),
+                     ],
 
-                  )
-              )
+                   )
+               ),
+             )
 
             ],
           ),
