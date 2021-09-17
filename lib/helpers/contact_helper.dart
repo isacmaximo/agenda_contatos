@@ -130,6 +130,8 @@ class Contact{
   String phone;
   String img;
 
+  Contact();
+
   //pegado do mapa e passando pro contato
   Contact.fromMap(Map map){
     id = map[idColumn];
