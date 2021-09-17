@@ -119,6 +119,71 @@ class _HomePageState extends State<HomePage> {
         //ao clicar, vai poder editar o respectivo o contato
         _showContactPage(contact: contacts[index]);
       },
+      onLongPress: (){
+        _showOptions(context, index);
+      },
+    );
+  }
+
+  //função para mostar opções ao clicar no card do contato:
+  void _showOptions(BuildContext context, int index){
+    //menu de opções do contato:
+    showModalBottomSheet(
+        context: context,
+        builder: (context){
+          //(BottomSheet > Container (tem um padding) > Column > Botões)
+          return BottomSheet(
+            onClosing: (){},
+            builder: (context){
+              return Container(
+                padding: EdgeInsets.all(10.0),
+                child: Column(
+                  //ocupa a menor quantidade de espaço (que no caso são os botões de de ação do card):
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+
+                    //opção 1:
+                    Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: TextButton(
+                          onPressed: (){
+                            Navigator.pop(context);
+                            _showContactPage(contact: contacts[index]);
+                          },
+                          child: Text("Ligar", style: TextStyle(color: Colors.red, fontSize: 20.0)),),
+                    ),
+
+                    //opção 2:
+                    Padding(
+                      padding: EdgeInsets.all(10.0),
+                      child: TextButton(
+                          onPressed: (){
+
+                          },
+                          child: Text("Editar", style: TextStyle(color: Colors.red, fontSize: 20.0))),
+                    ),
+
+                   Padding(
+                     padding: EdgeInsets.all(10.0),
+                     child:  //opção 3:
+                     TextButton(
+                         onPressed: (){
+                           helper.deleteContact(contacts[index].id);
+                           setState(() {
+                             contacts.removeAt(index);
+                             Navigator.pop(context);
+                           });
+                         },
+                         child: Text("Excluir", style: TextStyle(color: Colors.red, fontSize: 20.0))),
+                   )
+
+
+                  ],
+                ),
+              );
+            },
+          );
+        }
     );
   }
 
