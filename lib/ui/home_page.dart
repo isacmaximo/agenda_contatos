@@ -5,8 +5,13 @@ import 'package:flutter/material.dart';
 import 'package:agenda_de_contatos/helpers/contact_helper.dart';
 import 'dart:io';
 import 'package:url_launcher/url_launcher.dart';
-
 import 'contact_page.dart';
+
+//configuração para organizar os contatos em ordem alfabetica:
+//enum é um conjunto de constantes
+enum OrderOptions {ordemaz, ordemza}
+
+
 
 class HomePage extends StatefulWidget {
 
@@ -43,6 +48,25 @@ class _HomePageState extends State<HomePage> {
         title: Text("Contatos"),
         backgroundColor: Colors.red,
         centerTitle: true,
+        actions: <Widget>[
+          PopupMenuButton<OrderOptions>(
+            itemBuilder: (context) => <PopupMenuEntry<OrderOptions>>[
+
+              //popup(A a Z)
+              const PopupMenuItem<OrderOptions>(
+                  child: Text("Ordenar de A-Z"),
+                value: OrderOptions.ordemaz,
+              ),
+
+              //popup(Z a A)
+              const PopupMenuItem<OrderOptions>(
+                  child: Text("Ordenar de Z-A"),
+                value: OrderOptions.ordemza,
+              )
+            ],
+            onSelected: _orderList,
+          )
+        ],
       ),
       backgroundColor: Colors.white,
 
@@ -218,6 +242,24 @@ class _HomePageState extends State<HomePage> {
       setState(() {
         contacts = list;
       });
+    });
+  }
+
+  void _orderList(OrderOptions result){
+    switch(result){
+      case OrderOptions.ordemaz:
+        contacts.sort((a,b){
+          return a.name.toLowerCase().compareTo(b.name.toLowerCase());
+        });
+        break;
+      case OrderOptions.ordemza:
+        contacts.sort((a,b){
+          return b.name.toLowerCase().compareTo(a.name.toLowerCase());
+        });
+        break;
+    }
+    setState(() {
+
     });
   }
 
