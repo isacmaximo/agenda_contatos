@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:agenda_de_contatos/helpers/contact_helper.dart';
 import 'dart:io';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'contact_page.dart';
 
@@ -147,8 +148,9 @@ class _HomePageState extends State<HomePage> {
                         padding: EdgeInsets.all(10.0),
                         child: TextButton(
                           onPressed: (){
+                            //ligar:
+                            launch("tel:${contacts[index].phone}");
                             Navigator.pop(context);
-                            _showContactPage(contact: contacts[index]);
                           },
                           child: Text("Ligar", style: TextStyle(color: Colors.red, fontSize: 20.0)),),
                     ),
@@ -158,7 +160,8 @@ class _HomePageState extends State<HomePage> {
                       padding: EdgeInsets.all(10.0),
                       child: TextButton(
                           onPressed: (){
-
+                            Navigator.pop(context);
+                            _showContactPage(contact: contacts[index]);
                           },
                           child: Text("Editar", style: TextStyle(color: Colors.red, fontSize: 20.0))),
                     ),

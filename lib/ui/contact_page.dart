@@ -4,6 +4,7 @@ import 'package:agenda_de_contatos/helpers/contact_helper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
+import 'package:image_picker/image_picker.dart';
 
 //como podemos interagir, será stateful
 class ContactPage extends StatefulWidget {
@@ -105,6 +106,19 @@ class _ContactPageState extends State<ContactPage> {
                     ),
                   ),
                 ),
+                onTap: () {
+                  //depois posso fazer mais opções para colocar a opção de câmera
+                  //aqui pega a  imagem da galeria:
+                  ImagePicker.pickImage(source: ImageSource.gallery).then((file){
+                    if (file == null){
+                      return;
+                    }
+                    setState(() {
+                      _editedContact.img = file.path;
+                    });
+
+                  });
+                }
               ),
 
               //campo1:
